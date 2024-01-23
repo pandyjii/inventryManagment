@@ -1,7 +1,7 @@
 
 const express=require('express');
 const server=express();
-const PORT=8081;
+require("dotenv").config();
 const cors=require('cors')
 const EcomRouter=require('./Router/Route');
 
@@ -23,6 +23,6 @@ main().catch((err)=>console.log(err.message));
 server.use('/',EcomRouter.router);
 
 
-server.listen(PORT,(req,res)=>{
-    console.log(`server is running on port ${PORT}`);
+server.listen(process.env.PORT,(req,res)=>{
+    console.log(`server is running on port ${process.env.PORT}`);
 })

@@ -11,4 +11,4 @@ const EcoSchema=new mongoose.Schema({
 
 })
 
-exports.Ecommerce=mongoose.model('Ecommerce',EcoSchema);
+exports.User=mongoose.model('User',EcoSchema);
